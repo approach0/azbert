@@ -1,3 +1,10 @@
+---
+language: en
+tags:
+- azbert
+license: mit
+---
+
 ## About
 Here we share a pretrained BERT model that is aware of math tokens. The math tokens are treated specially and tokenized using [pya0](https://github.com/approach0/pya0), which adds very limited new tokens for latex markup (total vocabulary is just 31,061).
 
