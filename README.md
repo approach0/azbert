@@ -17,6 +17,8 @@ widget:
   example_title: "mathy"
 - text: "Proof by [MASK] that $n$ [MASK] $gt$ $3$ $n$ [MASK] $n$ [MASK] $6$"
   example_title: "mathy"
+- text: "The goal of life is [MASK]."
+  example_title: "philosophical"
 license: mit
 ---
 
