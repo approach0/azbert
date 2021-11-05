@@ -5,17 +5,13 @@ tags:
 - pretraining
 - fill-mask
 widget:
-- text: "Determine the [MASK] of $f$ $($ $x$ [MASK] $equal$ $x$ $plus$ $root$ ${$ $4$ $minus$ $x$ $supscript$ $2$ $}$ without [MASK]"
-  example_title: "mathy"
-- text: "Solve $y$ $prime$ [MASK] $minus$ $4$ $y$ $prime$ $plus$ $4$ $y$ [MASK] $x$ $e$ $supscript$ $x$"
-  example_title: "mathy"
 - text: "$f$ $($ $x$ [MASK] $y$ $)$"
   example_title: "mathy"
 - text: "$x$ [MASK] $x$ $equal$ $2$ $x$"
   example_title: "mathy"
-- text: "With Euler's [MASK], it [MASK] to $int$ $subscript$ $0$ [MASK] [MASK] $frac$ ${$ $1$ $plus$ $x$ $supscript$ $2$ $}$ ${$ $1$ $plus$ $x$ $}$ $d$ $x$"
+- text: "Proof by [MASK] that $n$ $fact$ $gt$ $3$ $n$ for $n$ $gt$ $6$"
   example_title: "mathy"
-- text: "Proof by [MASK] that $n$ [MASK] $gt$ $3$ $n$ [MASK] $n$ [MASK] $6$"
+- text: "Proof by induction that $n$ [MASK] $gt$ $3$ $n$ for $n$ $gt$ $6$"
   example_title: "mathy"
 - text: "The goal of life is [MASK]."
   example_title: "philosophical"
