@@ -29,3 +29,15 @@ The test file is tab-separated, the first column is additional positions you wan
 
 ### Example output
 ![](https://i.imgur.com/xpl87KO.png)
+
+### Upload to huggingface
+This repo is hosted on [Github](https://github.com/approach0/azbert), and only mirrored at [huggingface](https://huggingface.co/castorini/azbert-base).
+
+To upload to huggingface, use the `upload2hgf.sh` script.
+Before runnig this script, be sure to check:
+* check points for model and tokenizer are created under `./ckpt` folder
+* model contains all the files needed: `config.json` and `pytorch_model.bin`
+* tokenizer contains all the files needed: `added_tokens.json`, `special_tokens_map.json`, `tokenizer_config.json`, `vocab.txt` and `tokenizer.json`
+* no `tokenizer_file` field in `tokenizer_config.json` (sometimes it is located locally at `~/.cache`)
+* `git-lfs` is installed
+* having git-remote named `hgf` reference to `https://huggingface.co/castorini/azbert-base`
