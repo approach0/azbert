@@ -22,7 +22,7 @@ license: mit
 This [repository](https://github.com/approach0/azbert) is a boilerplate to push a mask-filling model to the HuggingFace Model Hub.
 
 ### Upload to huggingface
-Download your tokenizer, model checkpoints, and optionally the training logs (`events.out.*`) to the `./ckpt` directory.
+Download your tokenizer, model checkpoints, and optionally the training logs (`events.out.*`) to the `./ckpt` directory (do not include any large files except `pytorch_model.bin` and log files `events.out.*`).
 
 Optionally, test model using the MLM task:
 ```sh
