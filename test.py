@@ -3,8 +3,8 @@ import os
 import fire
 import torch
 from functools import partial
-from transformers import BertTokenizer
-from transformers import BertForPreTraining
+from transformers import AutoTokenizer
+from transformers import AutoModelForPreTraining
 from pya0.preprocess import preprocess_for_transformer
 
 
@@ -25,14 +25,10 @@ def classifier_hook(tokenizer, tokens, topk, module, inputs, outputs):
             str(tokenizer.convert_ids_to_tokens(top_cands)))
 
 
-def test(
-    test_file='test.txt',
-    ckpt_bert='ckpt/bert-pretrained-for-math-7ep/6_3_1382',
-    ckpt_tokenizer='ckpt/bert-tokenizer-for-math'
-    ):
+def test(model_name_or_path, tokenizer_name_or_path, test_file='test.txt'):
 
-    tokenizer = BertTokenizer.from_pretrained(ckpt_tokenizer)
-    model = BertForPreTraining.from_pretrained(ckpt_bert,
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path)
+    model = AutoModelForPreTraining.from_pretrained(model_name_or_path,
         tie_word_embeddings=True
     )
     with open(test_file, 'r') as fh:
