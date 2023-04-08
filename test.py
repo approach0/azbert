@@ -25,7 +25,7 @@ def classifier_hook(tokenizer, tokens, topk, module, inputs, outputs):
             str(tokenizer.convert_ids_to_tokens(top_cands)))
 
 
-def test(model_name_or_path, tokenizer_name_or_path, test_file='test.txt'):
+def test(tokenizer_name_or_path, model_name_or_path, test_file='test.txt'):
 
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path)
     model = AutoModelForPreTraining.from_pretrained(model_name_or_path,

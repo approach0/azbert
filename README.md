@@ -27,9 +27,7 @@ Download your tokenizer, model checkpoints, and optionally the training logs (`e
 Optionally, test model using the MLM task:
 ```sh
 pip install pya0
-python test.py \
-    --model_name_or_path ./ckpt/to/tokenizer \
-    --tokenizer_name_or_path ./ckpt/to/tokenizer
+python test.py ./ckpt/to/tokenizer ./ckpt/to/model
 ```
 > **Note**  
 > Modify the test examples in `test.txt` to play with it.
