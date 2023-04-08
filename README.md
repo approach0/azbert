@@ -26,8 +26,11 @@ Download your tokenizer, model checkpoints, and optionally the training logs (`e
 
 Optionally, test model using the MLM task:
 ```sh
-pip install pya0
-python test.py ./ckpt/to/tokenizer ./ckpt/to/model
+pip install pya0 # for math token preprocessing
+# testing local checkpoints:
+python test.py ./ckpt/math-tokenizer ./ckpt/2-2-0/encoder.ckpt
+# testing Model Hub checkpoints:
+python test.py approach0/coco-mae-220 approach0/coco-mae-220
 ```
 > **Note**  
 > Modify the test examples in `test.txt` to play with it.

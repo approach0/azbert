@@ -43,6 +43,7 @@ def test(tokenizer_name_or_path, model_name_or_path, test_file='test.txt'):
             for pos in filter(lambda x: x!=0, maskpos):
                 tokens[pos-1] = '[MASK]'
             sentence = ' '.join(tokens)
+            sentence = sentence.replace('[mask]', '[MASK]')
             tokens = tokenizer(sentence,
                 padding=True, truncation=True, return_tensors="pt")
             #print(tokenizer.decode(tokens['input_ids'][0]))
