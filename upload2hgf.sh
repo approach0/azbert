@@ -4,7 +4,7 @@ git lfs install
 find ckpt -type f | xargs -I{} cp {} .
 git lfs track *.bin
 git lfs track events.out.*
-tmp_branch=hgf-`uuidgen`
+tmp_branch=hgf-$(cat /proc/sys/kernel/random/uuid)
 git checkout -b $tmp_branch
 git add .
 git commit -am 'update model'
